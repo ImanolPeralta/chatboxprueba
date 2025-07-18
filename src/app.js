@@ -5,7 +5,7 @@ import viewRouter from './routes/views.routes.js';
 import { Server } from 'socket.io';
 
 const app = express();
-const PORT = 9090;
+const PORT = process.env.PORT || 9090;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
